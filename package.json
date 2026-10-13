@@ -1,0 +1,28 @@
+{
+  "name": "sai-karun-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Sai Karun Imiddisetty's portfolio site, built with React, TypeScript, and Vite.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.4.299",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/pdfjs-dist": "^2.10.377",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

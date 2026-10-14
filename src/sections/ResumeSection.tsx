@@ -7,8 +7,8 @@ const ResumeSection = () => {
         <p className="section-intro">A professional summary and quick links to view or download my complete resume.</p>
 
         <div className="resume-actions">
-          <a className="resume-download" href="/assets/resume.pdf" target="_blank" rel="noreferrer">Open PDF in new tab</a>
-          <a className="resume-download secondary" href="/assets/resume.pdf" download="Sai-Karun-Imiddisetty-Resume.pdf">Download PDF</a>
+          <a className="resume-download" href={`${import.meta.env.BASE_URL}assets/resume.pdf`} target="_blank" rel="noreferrer">Open PDF in new tab</a>
+          <a className="resume-download secondary" href={`${import.meta.env.BASE_URL}assets/resume.pdf`} download="Sai-Karun-Imiddisetty-Resume.pdf">Download PDF</a>
         </div>
 
         <div className="resume-content" aria-label="Resume summary">

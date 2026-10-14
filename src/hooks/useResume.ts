@@ -43,7 +43,7 @@ export const useResume = () => {
     let cancelled = false;
     const loadResume = async () => {
       try {
-        const pdf = await pdfjsLib.getDocument({ url: '/assets/resume.pdf' }).promise;
+        const pdf = await pdfjsLib.getDocument({ url: `${import.meta.env.BASE_URL}assets/resume.pdf` }).promise;
         const pages: string[] = [];
         for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
           pages.push(await extractPageText(await pdf.getPage(pageNumber)));

@@ -39,7 +39,7 @@ function PortalShell() {
     <>
       <main className="portal-interface" aria-label="Sai Karun's portfolio portals">
         <div className="portal-stage">
-          <img src="/assets/hero.png" alt="Sai Karun's portfolio workspace" className="portal-bg-image" />
+          <img src={`${import.meta.env.BASE_URL}assets/hero.png`} alt="Sai Karun's portfolio workspace" className="portal-bg-image" />
           <button className="portal-card portal-github" onClick={() => openExternal(externalLinks.github)} aria-label="Open GitHub" />
           <button className="portal-card portal-linkedin" onClick={() => openExternal(externalLinks.linkedin)} aria-label="Open LinkedIn" />
           <button className="portal-card portal-internships" onClick={() => setActiveSection('internships')} aria-label="Open Internships" />

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+import CertificationsSection from '../sections/CertificationsSection';
 import ContactSection from '../sections/ContactSection';
 import InternshipsSection from '../sections/InternshipsSection';
 import ProjectsSection from '../sections/ProjectsSection';
 import ResumeSection from '../sections/ResumeSection';
 
-type SectionId = 'contact' | 'internships' | 'projects' | 'resume';
+type SectionId = 'certifications' | 'contact' | 'internships' | 'projects' | 'resume';
 
 const externalLinks = {
   github: 'https://github.com/SaiKarun-28',
@@ -29,6 +30,7 @@ function PortalShell() {
   }, []);
 
   const sectionContent = {
+    certifications: <CertificationsSection />,
     contact: <ContactSection />,
     internships: <InternshipsSection />,
     projects: <ProjectsSection />,
@@ -42,10 +44,11 @@ function PortalShell() {
           <img src={`${import.meta.env.BASE_URL}assets/hero.png`} alt="Sai Karun's portfolio workspace" className="portal-bg-image" />
           <button className="portal-card portal-github" onClick={() => openExternal(externalLinks.github)} aria-label="Open GitHub" />
           <button className="portal-card portal-linkedin" onClick={() => openExternal(externalLinks.linkedin)} aria-label="Open LinkedIn" />
-          <button className="portal-card portal-internships" onClick={() => setActiveSection('internships')} aria-label="Open Internships" />
           <button className="portal-card portal-projects" onClick={() => setActiveSection('projects')} aria-label="Open Projects" />
+          <button className="portal-card portal-internships" onClick={() => setActiveSection('internships')} aria-label="Open Internships" />
           <button className="portal-card portal-resume" onClick={() => setActiveSection('resume')} aria-label="Open Resume" />
           <button className="portal-card portal-contact" onClick={() => setActiveSection('contact')} aria-label="Open Contact" />
+          <button className="portal-card portal-certifications" onClick={() => setActiveSection('certifications')} aria-label="Open Certifications" />
         </div>
       </main>
 

@@ -10,11 +10,6 @@ const CertificationsSection = () => {
           A collection of verified Google Cloud skill badges and professional certifications.
         </p>
 
-        <div className="resume-actions">
-          <a className="resume-download" href={`${import.meta.env.BASE_URL}assets/merged_portfolio.pdf`} target="_blank" rel="noreferrer">View Full Portfolio (PDF)</a>
-          <a className="resume-download secondary" href={`${import.meta.env.BASE_URL}assets/merged_portfolio.pdf`} download="Certifications-Portfolio.pdf">Download PDF</a>
-        </div>
-
         <div className="projects-list projects-grid">
           {certificationsData.map((cert, index) => (
             <article key={cert.title} className="project-card project-card-complete">
